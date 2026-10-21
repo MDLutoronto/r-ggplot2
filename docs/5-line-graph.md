@@ -25,7 +25,7 @@ ggplot(subset(lfs25, lfsstat == "Unemployed"),
   theme_minimal()
 ```
 
-<img src="{{ '/assets/images/linegraph1.png' | relative_url }}"  alt='Line graph of estimated unemployed people in Ontario by survey month in 2025' title='' width='600'  >
+<img src="{{ '/assets/images/linegraph1.png' | relative_url }}"  alt='Line graph of estimated unemployed people in Ontario by survey month in 2025' title='' width='800'  >
 
 ```
 ggplot(subset(lfs25, lfsstat == "Unemployed"), 
@@ -40,7 +40,7 @@ ggplot(subset(lfs25, lfsstat == "Unemployed"),
        caption = "Source: Statistics Canada, LFS PUMF, 2025")
 ```
 
-<img src="{{ '/assets/images/linegraph2.png' | relative_url }}"  alt='Line graph of estimated unemployed people in Ontario by month in 2025' title='' width='600'  >
+<img src="{{ '/assets/images/linegraph2.png' | relative_url }}"  alt='Line graph of estimated unemployed people in Ontario by month in 2025' title='' width='800'  >
 
 ### Data: Economics
 
@@ -55,4 +55,4 @@ ggplot(economics, aes(x=date, y=uempmed)) +
   ylab("Median Duration (Weeks)")
 ```
 
-<img src="{{ '/assets/images/linegraph3.png' | relative_url }}"  alt='US Unemployment Trends, Median unemployment duration in weeks, 1967–2015' title='' width='600'  >
+<img src="{{ '/assets/images/linegraph3.png' | relative_url }}"  alt='US Unemployment Trends, Median unemployment duration in weeks, 1967–2015' title='' width='800'  >
