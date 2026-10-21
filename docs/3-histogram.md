@@ -14,7 +14,11 @@ parent: Introduction to ggplot2
 
 ## Histogram
 
-Use `geom_histogram()` to plot a histogram. The `binwidth` argument sets the width of each bar, in the units of the x-axis variable. The `na.rm = TRUE` argument tells R to ignore missing values and silences the warning about dropped rows. `weight = finalwt` makes the y-axis show estimated Ontario employees instead of survey responses.
+Use `geom_histogram()` to plot a histogram. The `binwidth` argument sets the width of each bar, in the units of the x-axis variable. 
+
+### Data: Labour Force Survey
+
+The `na.rm = TRUE` argument tells R to ignore missing values and silences the warning about dropped rows. `weight = finalwt` makes the y-axis show estimated Ontario employees instead of survey responses.
 
 ```
 ggplot(lfs26sep, aes(x = hrlyearn/100, weight = finalwt)) +
@@ -36,3 +40,21 @@ ggplot(lfs26sep, aes(x = hrlyearn/100, weight = finalwt)) +
 ```
 
 <img src="{{ '/assets/images/histogram2.png' | relative_url }}"  alt='Styled version of the same histogram with dark blue bars, a title, axis labels, and a source caption' title='' width='600'>
+
+### Data: Diamonds
+
+```
+# Data: Diamonds
+data(diamonds)
+ggplot(diamonds, aes(price)) + geom_histogram()
+ggplot(diamonds, aes(price)) + geom_histogram() + theme_classic()
+ggplot(diamonds, aes(price)) + geom_histogram(binwidth=100) + theme_classic()
+ggplot(diamonds, aes(price)) + 
+  geom_histogram(binwidth=100, fill="darkblue", color="lightblue") + 
+  theme_classic() + 
+  ggtitle("Histogram of the Diamond Prices") + 
+  theme(plot.title=element_text(size=20, hjust=0.5)) + 
+  xlab("Price") + ylab("Count")
+```
+
+<img src="{{ '/assets/images/histogram3.png' | relative_url }}"  alt='Histogram of the Diamond Prices' title='' width='600'>

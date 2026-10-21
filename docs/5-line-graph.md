@@ -16,6 +16,7 @@ parent: Introduction to ggplot2
 
 Use `geom_line()` to plot a line graph. The `stat` argument sets the statistic to be displayed on the y-axis. The `colour` argument specifies the colour of the line graph and `linewidth` specifies its width. `weight = finalwt` makes the y-axis show estimated unemployed people in Ontario pinstead of survey responses.
 
+### Data: Labour Force Survey
 
 ```
 ggplot(subset(lfs25, lfsstat == "Unemployed"), 
@@ -40,3 +41,18 @@ ggplot(subset(lfs25, lfsstat == "Unemployed"),
 ```
 
 <img src="{{ '/assets/images/linegraph2.png' | relative_url }}"  alt='Line graph of estimated unemployed people in Ontario by month in 2025' title='' width='600'  >
+
+### Data: Economics
+
+```
+data(economics)
+ggplot(economics, aes(x=date, y=uempmed)) +
+  theme_minimal() +
+  geom_line(colour="yellow3", linewidth=1) + 
+  labs(title="US Unemployment Trends",
+       subtitle="Median unemployment duration in weeks, 1967–2015") +
+  xlab("Date") +
+  ylab("Median Duration (Weeks)")
+```
+
+<img src="{{ '/assets/images/linegraph3.png' | relative_url }}"  alt='US Unemployment Trends, Median unemployment duration in weeks, 1967–2015' title='' width='600'  >

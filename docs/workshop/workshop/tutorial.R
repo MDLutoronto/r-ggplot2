@@ -53,6 +53,8 @@ ggplot(lfs26sep, aes(x = uhrsmain, y = hrlyearn))
 #------------------------------#
 # Example 1: Histogram         #
 #------------------------------#
+
+# Data: Labour Force Survey
 ggplot(lfs26sep, aes(x = hrlyearn/100, weight = finalwt)) +
   geom_histogram(binwidth = 1, na.rm = TRUE) +
   theme_classic()
@@ -66,11 +68,23 @@ ggplot(lfs26sep, aes(x = hrlyearn/100, weight = finalwt)) +
   xlab("Hourly wage ($)") + ylab("Estimated employees") + 
   labs(caption = "Source: Statistics Canada, LFS PUMF, September 2026")
 
-
+# Data: Diamonds
+data(diamonds)
+ggplot(diamonds, aes(price)) + geom_histogram()
+ggplot(diamonds, aes(price)) + geom_histogram() + theme_classic()
+ggplot(diamonds, aes(price)) + geom_histogram(binwidth=100) + theme_classic()
+ggplot(diamonds, aes(price)) + 
+  geom_histogram(binwidth=100, fill="darkblue", color="lightblue") + 
+  theme_classic() + 
+  ggtitle("Histogram of the Diamond Prices") + 
+  theme(plot.title=element_text(size=20, hjust=0.5)) + 
+  xlab("Price") + ylab("Count")
 
 #------------------------------#
 # Example 2: Scatterplot       #
 #------------------------------#
+
+# Data: Labour Force Survey
 ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100)) + 
   geom_point(shape = "circle open", na.rm = TRUE) +
   theme_light()
@@ -107,11 +121,24 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
        caption = "Source: Statistics Canada, LFS PUMF, September 2026") + 
   scale_colour_brewer(palette = "Set2")
 
+# Data: Diamonds
+data(diamonds)
+install.packages("colourpicker")
+clarity_colours <- c("#228510", "#FF7F00", "#9932CC", "#C1FFC1", "#FFC125", "#7F7F7F", "#FF6EB4", "#00FA9A")
+ggplot(diamonds, aes(carat, price, colour=clarity)) + 
+  geom_point(shape="diamond filled") + 
+  theme_light() + 
+  ggtitle("Diamond Price by Carat and Clarity") + 
+  xlab("Carat") + ylab("Price") +
+  labs(colour = "Clarity") + 
+  scale_colour_manual(values = clarity_colours)
 
 
 #-------------------------------------#
 # Example 3: Line Graph               #
 #-------------------------------------#
+
+# Data: Labour Force Survey
 ggplot(subset(lfs25, lfsstat == "Unemployed"), 
        aes(x = survmnth, weight = finalwt)) +
   geom_line(stat = "count") +
@@ -128,6 +155,16 @@ ggplot(subset(lfs25, lfsstat == "Unemployed"),
        x = "Survey Month", y = "Estimated unemployed", 
        caption = "Source: Statistics Canada, LFS PUMF, 2025")
 
+
+# Data: Economics
+data(economics)
+ggplot(economics, aes(x=date, y=uempmed)) +
+  theme_minimal() +
+  geom_line(colour="yellow3", linewidth=1) + 
+  labs(title="US Unemployment Trends",
+       subtitle="Median unemployment duration in weeks, 1967–2015") +
+  xlab("Date") +
+  ylab("Median Duration (Weeks)")
 
 
 #-------------------------------------#

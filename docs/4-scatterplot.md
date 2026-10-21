@@ -16,6 +16,7 @@ parent: Introduction to ggplot2
 
 Use `geom_point()` to plot a scatterplot. The `shape` argument specifies the shape of each data point. The `na.rm = TRUE` argument tells R to ignore missing values and silences the warning about dropped rows. 
 
+### Data: Labour Force Survey
 
 ```
 ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100)) + 
@@ -38,7 +39,7 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
 <img src="{{ '/assets/images/scatterplot2.png' | relative_url }}"  alt='Same scatterplot with points coloured by gender, plus title, labels, and legend' title='' width='600'  >
 
 
-### Colourpicker
+#### Colourpicker
 
 The `colourpicker` package adds a colour picker to RStudio. After installing it, open **Addins > Colour Picker**, choose your colours, and copy their hex codes. Then pass them to `scale_colour_manual()`, one colour per group.
 
@@ -59,7 +60,7 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
 <img src="{{ '/assets/images/scatterplot3.png' | relative_url }}"  alt='Same scatterplot using custom blue and orange colours for gender' title='' width='600'  >
 
 
-### Brewer palettes
+#### Brewer palettes
 
 `scale_colour_brewer()` applies a ready-made palette. For groups with no natural order, like gender, use a qualitative palette such as "Set2".
 
@@ -75,3 +76,20 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
   scale_colour_brewer(palette = "Set2")
 ```
 <img src="{{ '/assets/images/scatterplot4.png' | relative_url }}"  alt='Same scatterplot using the Set2 Brewer palette for gender' title='' width='600'  >
+
+### Data: Diamonds
+
+```
+data(diamonds)
+install.packages("colourpicker")
+clarity_colours <- c("#228510", "#FF7F00", "#9932CC", "#C1FFC1", "#FFC125", "#7F7F7F", "#FF6EB4", "#00FA9A")
+ggplot(diamonds, aes(carat, price, colour=clarity)) + 
+  geom_point(shape="diamond filled") + 
+  theme_light() + 
+  ggtitle("Diamond Price by Carat and Clarity") + 
+  xlab("Carat") + ylab("Price") +
+  labs(colour = "Clarity") + 
+  scale_colour_manual(values = clarity_colours)
+```
+
+<img src="{{ '/assets/images/scatterplot5.png' | relative_url }}"  alt='Diamond Price by Carat and Clarity' title='' width='600'  >

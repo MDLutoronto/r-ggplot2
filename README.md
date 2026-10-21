@@ -7,7 +7,7 @@ This guide consists of three data visualization examples (a histogram, a scatter
 The tutorial and the workshop zip folder can be accessed using the links below.
 
 **TUTORIAL**: https://mdlutoronto.github.io/r-ggplot2/ \
-**WORKSHOP**: [workshop.zip](https://raw.githubusercontent.com/MDLutoronto/r-ggplot2/main/docs/assets/workshop/workshop.zip)
+**WORKSHOP**: [workshop.zip](https://raw.githubusercontent.com/MDLutoronto/r-ggplot2/main/docs/workshop/workshop.zip)
 
 Additional learning materials are listed in the [Resources](https://mdlutoronto.github.io/r-ggplot2/7-resources/) section.
 
