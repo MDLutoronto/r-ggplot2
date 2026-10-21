@@ -21,7 +21,7 @@ R is a free programming language for data analysis. RStudio is a free program th
 For installation steps, see this [R & RStudio](https://mdlutoronto.github.io/r-intro/01-r-and-rstudio/) lesson. 
 
 
-### ggplot2 package
+### Install & load ggplot2
 
 ```
 # Install & load ggplot2
@@ -30,7 +30,7 @@ library(ggplot2)
 ```
 
 
-### Dataset
+### Prepare LFS Datasets
 
 This guide uses two Labour Force Survey (LFS) datasets: Ontario 2025 and Ontario September 2026. 
 
@@ -68,7 +68,7 @@ lfs26sep <- get_pumf("LFS", "2026-09") |>
 ```
  
 
-### Variables Used
+### LFS Variables Used
 
 Variable names are uppercase in the original data. The code filters using `PROV`, then converts all names to lowercase, so the examples use lowercase variable names.
 
