@@ -1,8 +1,8 @@
 ## Site settings
-title: "Map & Data Library just the Docs Template"
-description: "Workshops and guides from the Map & Data Library, University of Toronto"
-baseurl: "/jtd-template" # Replace it with the "/" + repo's name (e.g. "/my-repo-name')
-repository: "MDLutoronto/jtd-template" # for github-metadata
+title: "Introduction to ggplot2"
+description: "Data visualization in R with ggplot2 using LFS"
+baseurl: "/r-ggplot2" # Replace it with the "/" + repo's name (e.g. "/my-repo-name')
+repository: "MDLutoronto/r-ggplot2" # for github-metadata
 ## Navigation footer logos and links
 ## Change it only if you want to use different logos or links
 ## Logos should be placed in the /assets/images/ directory, or you can use an external image link
