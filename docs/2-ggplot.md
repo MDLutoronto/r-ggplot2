@@ -37,4 +37,4 @@ ggplot(lfs26sep, aes(x = uhrsmain, y = hrlyearn))
 
 <img src="{{ '/assets/images/ggplot3.png' | relative_url }}"  alt='ggplot canvas with x- and y-axes and no data' title='' width='700'>
 
-To draw data on the canvas, add a geom function, such as geom_histogram(), using +. The next examples show how.
+To draw data on the canvas, add a geom function, such as `geom_histogram()`, using `+`. The next examples show how.
