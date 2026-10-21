@@ -1,5 +1,14 @@
-# Map and Data Library JTD template
+# Introduction to ggplot2
 
-This repository is for creating a new just-the-docs based documentation with the Map and Data Library the default theme.
+This guide introduces users to the ggplot2 R package. ggplot2 is a popular R package that is used to make publication-quality graphs.
 
-See the [Map & Data Library just-the-docs editing guide](https://mdlutoronto.github.io/jtd-edit-setup/create-new-guide/) for more information on how to customize your documentation.
+This guide consists of three data visualization examples (a histogram, a scatterplot, and a time-series line graph) and shows how to save plots. The examples use Ontario data from Statistics Canada’s Labour Force Survey (LFS) for 2025 and September 2026.
+
+The tutorial and the workshop zip folder can be accessed using the links below.
+
+**TUTORIAL**: https://mdlutoronto.github.io/r-ggplot2/ \
+**WORKSHOP**: [workshop.zip](https://raw.githubusercontent.com/MDLutoronto/r-ggplot2/main/docs/assets/workshop/workshop.zip)
+
+Additional learning materials are listed in the [Resources](https://mdlutoronto.github.io/r-ggplot2/7-resources/) section.
+
+If you need assistance, fill out the [support request form](https://library.utoronto.ca/contact-us/data-maps).
