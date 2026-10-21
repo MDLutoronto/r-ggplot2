@@ -44,7 +44,6 @@ ggplot(lfs26sep, aes(x = hrlyearn/100, weight = finalwt)) +
 ### Data: Diamonds
 
 ```
-# Data: Diamonds
 data(diamonds)
 ggplot(diamonds, aes(price)) + geom_histogram()
 ggplot(diamonds, aes(price)) + geom_histogram() + theme_classic()
