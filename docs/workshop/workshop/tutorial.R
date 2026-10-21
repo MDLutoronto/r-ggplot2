@@ -124,7 +124,8 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
 # Data: Diamonds
 data(diamonds)
 install.packages("colourpicker")
-clarity_colours <- c("#228510", "#FF7F00", "#9932CC", "#C1FFC1", "#FFC125", "#7F7F7F", "#FF6EB4", "#00FA9A")
+clarity_colours <- c("#228510", "#FF7F00", "#9932CC", "#C1FFC1", 
+                     "#FFC125", "#7F7F7F", "#FF6EB4", "#00FA9A")
 ggplot(diamonds, aes(carat, price, colour=clarity)) + 
   geom_point(shape="diamond filled") + 
   theme_light() + 

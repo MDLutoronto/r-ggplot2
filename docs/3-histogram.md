@@ -26,7 +26,7 @@ ggplot(lfs26sep, aes(x = hrlyearn/100, weight = finalwt)) +
   theme_classic()
 ```
 
-<img src="{{ '/assets/images/histogram1.png' | relative_url }}"  alt='Histogram of hourly wages in Ontario' title='' width='800'>
+<img src="{{ '/assets/images/histogram1.png' | relative_url }}"  alt='Histogram of hourly wages in Ontario' title='' width='700'>
 
 ```
 ggplot(lfs26sep, aes(x = hrlyearn/100, weight = finalwt)) +
@@ -39,7 +39,7 @@ ggplot(lfs26sep, aes(x = hrlyearn/100, weight = finalwt)) +
   labs(caption = "Source: Statistics Canada, LFS PUMF, September 2026")
 ```
 
-<img src="{{ '/assets/images/histogram2.png' | relative_url }}"  alt='Styled version of the same histogram with dark blue bars, a title, axis labels, and a source caption' title='' width='800'>
+<img src="{{ '/assets/images/histogram2.png' | relative_url }}"  alt='Styled version of the same histogram with dark blue bars, a title, axis labels, and a source caption' title='' width='700'>
 
 ### Data: Diamonds
 
@@ -56,4 +56,4 @@ ggplot(diamonds, aes(price)) +
   xlab("Price") + ylab("Count")
 ```
 
-<img src="{{ '/assets/images/histogram3.png' | relative_url }}"  alt='Histogram of the Diamond Prices' title='' width='800'>
+<img src="{{ '/assets/images/histogram3.png' | relative_url }}"  alt='Histogram of the Diamond Prices' title='' width='700'>

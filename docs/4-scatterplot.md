@@ -24,7 +24,7 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100)) +
   theme_light()
 ```
 
-<img src="{{ '/assets/images/scatterplot1.png' | relative_url }}"  alt='Scatterplot of hourly wage by usual weekly hours in Ontario' title='' width='800'  >
+<img src="{{ '/assets/images/scatterplot1.png' | relative_url }}"  alt='Scatterplot of hourly wage by usual weekly hours in Ontario' title='' width='700'  >
 
 ```
 ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) + 
@@ -36,10 +36,10 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
        caption = "Source: Statistics Canada, LFS PUMF, September 2026")
 ```
 
-<img src="{{ '/assets/images/scatterplot2.png' | relative_url }}"  alt='Same scatterplot with points coloured by gender, plus title, labels, and legend' title='' width='800'  >
+<img src="{{ '/assets/images/scatterplot2.png' | relative_url }}"  alt='Same scatterplot with points coloured by gender, plus title, labels, and legend' title='' width='700'  >
 
 
-**Colourpicker**\
+**Colourpicker**<br>
 
 The `colourpicker` package adds a colour picker to RStudio. After installing it, open **Addins > Colour Picker**, choose your colours, and copy their hex codes. Then pass them to `scale_colour_manual()`, one colour per group.
 
@@ -57,10 +57,10 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
   scale_colour_manual(values = gender_colours)
 ```
 
-<img src="{{ '/assets/images/scatterplot3.png' | relative_url }}"  alt='Same scatterplot using custom blue and orange colours for gender' title='' width='800'  >
+<img src="{{ '/assets/images/scatterplot3.png' | relative_url }}"  alt='Same scatterplot using custom blue and orange colours for gender' title='' width='700'  >
 
 
-#### Brewer palettes
+**Brewer palettes**<br>
 
 `scale_colour_brewer()` applies a ready-made palette. For groups with no natural order, like gender, use a qualitative palette such as "Set2".
 
@@ -75,14 +75,15 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
        caption = "Source: Statistics Canada, LFS PUMF, September 2026") + 
   scale_colour_brewer(palette = "Set2")
 ```
-<img src="{{ '/assets/images/scatterplot4.png' | relative_url }}"  alt='Same scatterplot using the Set2 Brewer palette for gender' title='' width='800'  >
+<img src="{{ '/assets/images/scatterplot4.png' | relative_url }}"  alt='Same scatterplot using the Set2 Brewer palette for gender' title='' width='700'  >
 
 ### Data: Diamonds
 
 ```
 data(diamonds)
 install.packages("colourpicker")
-clarity_colours <- c("#228510", "#FF7F00", "#9932CC", "#C1FFC1", "#FFC125", "#7F7F7F", "#FF6EB4", "#00FA9A")
+clarity_colours <- c("#228510", "#FF7F00", "#9932CC", "#C1FFC1", 
+                     "#FFC125", "#7F7F7F", "#FF6EB4", "#00FA9A")
 ggplot(diamonds, aes(carat, price, colour=clarity)) + 
   geom_point(shape="diamond filled") + 
   theme_light() + 
@@ -92,4 +93,4 @@ ggplot(diamonds, aes(carat, price, colour=clarity)) +
   scale_colour_manual(values = clarity_colours)
 ```
 
-<img src="{{ '/assets/images/scatterplot5.png' | relative_url }}"  alt='Diamond Price by Carat and Clarity' title='' width='800'  >
+<img src="{{ '/assets/images/scatterplot5.png' | relative_url }}"  alt='Diamond Price by Carat and Clarity' title='' width='700'  >
