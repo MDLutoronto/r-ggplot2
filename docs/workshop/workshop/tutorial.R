@@ -110,7 +110,7 @@ ggplot(lfs26sep, aes(x = uhrsmain/10, y = hrlyearn/100, colour = gender)) +
 
 
 #-------------------------------------#
-# Example 3: Time Series Line Graph   #
+# Example 3: Line Graph               #
 #-------------------------------------#
 ggplot(subset(lfs25, lfsstat == "Unemployed"), 
        aes(x = survmnth, weight = finalwt)) +
