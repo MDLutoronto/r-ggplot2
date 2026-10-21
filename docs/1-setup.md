@@ -21,7 +21,7 @@ R is a free programming language for data analysis. RStudio is a free program th
 For installation steps, see this [R & RStudio](https://mdlutoronto.github.io/r-intro/01-r-and-rstudio/) lesson. 
 
 
-### Install & load ggplot2
+### Install ggplot2
 
 ```
 # Install & load ggplot2
