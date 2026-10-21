@@ -38,7 +38,6 @@ The code below collects the two datasets from Statistics Canada directly in R us
 
 
 ```
-# LFS Datasets
 # Temporary storage
 options(canpumf.cache_path = tempdir())   # LFS downloads
 options(duckdb.home = tempdir())          # DuckDB helper files
